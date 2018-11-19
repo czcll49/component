@@ -25,13 +25,7 @@
 </html>
 
 <style>
-    body,
-    ul,
-    li,
-    img,
-    h1,
-    div,
-    h3 {
+    body, ul, li, img, h1, div, h3 {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -39,10 +33,7 @@
         box-sizing: border-box;
     }
 
-    a:active,
-    a:hover,
-    a:link,
-    a:visited {
+    a:active, a:hover, a:link, a:visited {
         text-decoration: none;
     }
 
@@ -198,11 +189,11 @@
   };
 
   let renderQrcode = (data) => {
-    let listStr = '';
-    if(data){
-      for(let j= 0; j< data.length; j++){
-        let item = data[j];
-        listStr += `<li id=${item.id} class="qrcode_content">
+      let listStr = '';
+      if(data){
+          for(let j= 0; j< data.length; j++){
+              let item = data[j];
+              listStr += `<li id=${item.id} class="qrcode_content">
                         <div class="title">
                             <h3>${item.name}</h3>
                         </div>
@@ -213,9 +204,9 @@
                             微信号: ${item.id}
                         </div>
                     </li>`
+          }
       }
-    }
-    return listStr
+      return listStr
   };
 
   let renderList = (navData)=>{
